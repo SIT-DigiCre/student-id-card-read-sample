@@ -14,6 +14,7 @@ C++、C#（Windows）で利用する場合は、まず[NFCポートソフトウ�
 Python（Linux）で利用する場合は、[nfcpy](https://nfcpy.readthedocs.io/en/latest/topics/get-started.html)をインストールします。
 インストールは `$ pip install nfcpy==1.0.3` で可能です。
 また、pythonディレクトリに移動して `$ pipenv install` をすることで仮想環境にインストールされます。
+root権限なしで実行したい場合、 `$ python -m nfc` を実行して表示される指示に従ってください。
 
 ## 依存ライブラリ
 C++、C#は[FeliCa Library](https://ja.osdn.net/projects/felicalib/)を利用しています。
