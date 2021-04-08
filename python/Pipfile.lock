@@ -1,0 +1,61 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "520c838fab709cc76b69d9f61540038858cd4d1c2955ae2538e2f3040730819b"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.8"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "libusb1": {
+            "hashes": [
+                "sha256:27aec6aa1ff9ca845d0035023f3cf39710afac56903c51cd96a95404d064189e",
+                "sha256:2dff68819350bf8a8c157c7fa40d3efc741cb57868687d1714c8125ee99e8ac8",
+                "sha256:8ee4a963d4ecc20d9f4543b9151729c9cc9a229c2f9119e12bff762e84d8859f",
+                "sha256:a323588902fbd3693f8fddd7eac016700b24116c31b00756b9f52cf06c2a6629",
+                "sha256:b4f25a2d66f62ec740edba3597038a7e9cd45b43456acfdb7a2bca8c2ad4aa30",
+                "sha256:c19d49136ef262474dbbac8bd40a2c4b65660220571de8564efec631c56bdc09",
+                "sha256:c3dd4df43b5c38f65bf599413810d021f5f98396c4b6f66765fb98193aca11b0"
+            ],
+            "version": "==1.9.2"
+        },
+        "ndeflib": {
+            "hashes": [
+                "sha256:1d56828558b9b16f2822a4051824346347b66adf5320ea86070748b6f2454a88",
+                "sha256:c634b1af2ab454754f0fdbe1debd38247ed7bdaf94587359b857726f3ee7decb"
+            ],
+            "version": "==0.3.3"
+        },
+        "nfcpy": {
+            "hashes": [
+                "sha256:393b614e8d17671f55b75b1cdba06b4e7aa30b78a84f5cad2cc7c6fc65ae100b",
+                "sha256:cf7d30e4a09f4dc4bb377b5a72ac607cf92a3e93dbcbb91cb90ec0343a95cdfe"
+            ],
+            "index": "pypi",
+            "version": "==1.0.3"
+        },
+        "pydes": {
+            "hashes": [
+                "sha256:e2ab8e21d2b83e90d90dbfdcb6fb8ac0000b813238b7ecaede04f8435c389012"
+            ],
+            "version": "==2.0.1"
+        },
+        "pyserial": {
+            "hashes": [
+                "sha256:3c77e014170dfffbd816e6ffc205e9842efb10be9f58ec16d3e8675b4925cddb",
+                "sha256:c4451db6ba391ca6ca299fb3ec7bae67a5c55dde170964c7a14ceefec02f2cf0"
+            ],
+            "version": "==3.5"
+        }
+    },
+    "develop": {}
+}
