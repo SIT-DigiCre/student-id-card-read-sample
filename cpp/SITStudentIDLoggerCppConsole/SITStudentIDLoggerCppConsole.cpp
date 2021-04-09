@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
         sit_student_card::Reader r;
 
         std::string before_read_student_id = "";
-        while (1) {
+        while (true) {
             try {
                 sit_student_card::Card card = r.read();
                 if (before_read_student_id != card.id) {
