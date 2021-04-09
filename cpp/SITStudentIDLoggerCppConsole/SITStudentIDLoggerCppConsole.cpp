@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <string>
 #include <fstream>
-#include "felicalib.h"
+#include "sit_student_card.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -13,38 +13,27 @@ int main(int argc, char* argv[])
         filename = argv[1];
     }
 
-    pasori* p;
-    felica* f;
-    p = pasori_open(NULL);
-    if (!p) {
-        std::cerr << "PaSoRi open failed!" << std::endl;
-        exit(1);
-    }
-    pasori_init(p);
+    try {
+        sit_student_card::Reader r;
 
-    std::string before_read_student_id = "";
-    while (1) {
-        f = felica_polling(p, 0x8277, 0, 0);
-        if (!f) {
-            //std::cerr << "Polling card failed" << std::endl;
-            continue;
-            //exit(1);
-        }
-        uint8 data[17];
-        data[16] = 0;
-        if (felica_read_without_encryption02(f, 0x010b, 0, 0, data) == 0) {
-            std::string datastring = (char*)data;
-            std::string student_id = datastring.substr(3, 7);
-
-            if (before_read_student_id != student_id) {
-                std::ofstream f;
-                f.open(filename, std::ios_base::app);
-                f << student_id << std::endl;
-                std::cout << student_id << std::endl;
-                before_read_student_id = student_id;
+        std::string before_read_student_id = "";
+        while (1) {
+            try {
+                sit_student_card::Card card = r.read();
+                if (before_read_student_id != card.id) {
+                    std::ofstream f;
+                    f.open(filename, std::ios_base::app);
+                    f << card.id << std::endl;
+                    std::cout << card.id << std::endl;
+                    before_read_student_id = card.id;
+                }
+            } catch (sit_student_card::PollingFailedException e) {
+                //std::cerr << e.what() << std::endl;
+            } catch (sit_student_card::ReadFailedException e) {
+                //std::cerr << e.what() << std::endl;
             }
         }
-        felica_free(f);
+    } catch (std::runtime_error e) {
+        std::cerr << e.what() << std::endl;
     }
 }
-

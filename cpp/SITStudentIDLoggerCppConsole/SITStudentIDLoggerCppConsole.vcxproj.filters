@@ -21,12 +21,18 @@
     <ClCompile Include="felicalib.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="sit_student_card.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="felicaint.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="felicalib.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sit_student_card.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

@@ -141,10 +141,12 @@
   <ItemGroup>
     <ClCompile Include="felicalib.c" />
     <ClCompile Include="SITStudentIDLoggerCppConsole.cpp" />
+    <ClCompile Include="sit_student_card.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="felicaint.h" />
     <ClInclude Include="felicalib.h" />
+    <ClInclude Include="sit_student_card.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
